@@ -1,9 +1,19 @@
-import ProductCard from "./ProductCard.jsx";
+import Carousel from "./Grid";
+import Hero from "./Hero"; 
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-neutral flex justify-center items-center">
-      <ProductCard title="Cute Fern" price="$12" />
-    </div>
+    <>
+<h1 className="text-5xl md:text-6xl font-extrabold tracking-wider mb-8 text-secondary">
+  Fools & Ferns 
+</h1>
+
+      <div>
+        <Hero />
+      </div>
+      <div className="min-h-screen bg-primary flex flex-col justify-center items-center">
+        <Carousel />
+      </div>
+    </>
   );
 }
