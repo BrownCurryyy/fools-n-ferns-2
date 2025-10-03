@@ -1,19 +1,26 @@
+import { useRef } from "react";
+import About from "./About";
+import Footer from "./Footer";
 import Carousel from "./Grid";
 import Hero from "./Hero"; 
+import Header from "./Header";
+import Contact from "./Contact";
 
 export default function App() {
+  const contactRef = useRef(null);
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-<h1 className="text-5xl md:text-6xl font-extrabold tracking-wider mb-8 text-secondary">
-  Fools & Ferns 
-</h1>
-
-      <div>
-        <Hero />
-      </div>
-      <div className="min-h-screen bg-primary flex flex-col justify-center items-center">
-        <Carousel />
-      </div>
+      <Header onContactClick={scrollToContact} />
+      <Hero />
+      <Carousel />
+      <About />
+      <Contact ref={contactRef} />
+      <Footer />
     </>
   );
 }

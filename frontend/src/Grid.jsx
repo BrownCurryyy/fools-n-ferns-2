@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 
 export default function Grid() {
   return (
-    <div className="w-full p-6 bg-primary rounded-xl">
+    <div className="w-full p-6 bg-accent rounded-xl">
       <h2 className="text-3xl font-extrabold text-secondary mb-6 text-center">
         Our Plants 🌿
       </h2>
